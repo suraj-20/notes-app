@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&family=Poppins:wght@300;400;600;800&display=swap');
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(64, 64, 197, 1) 0%,
+    rgba(79, 160, 177, 1) 100%
+  );
+}
+
+.container {
+  width: 30%;
+  /* height: 60%; */
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px #f5efd3;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+hr {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  padding: 1rem 2rem;
+}
+
+label {
+  display: block;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  border-bottom: 1px solid silver;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #14487aac;
+}
+
+.btn:hover {
+  background-color: #3c8cd7db;
+  color: #f5efd3;
+}
+
+.signIn {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
