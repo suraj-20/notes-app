@@ -31,6 +31,10 @@ h2 {
   margin-bottom: 0;
 }
 
+p {
+  margin: 0;
+}
+
 hr {
   width: 80%;
   margin-left: auto;
@@ -57,7 +61,13 @@ input {
   width: 100%;
   border: none;
   outline: none;
-  background-color: #14487aac;
+  background-color: rgba(64, 64, 197, 1);
+}
+
+.buttons {
+  width: 12rem;
+  align-items: center;
+  justify-content: end;
 }
 
 .btn:hover {
@@ -72,4 +82,46 @@ input {
 a {
   text-decoration: none;
   font-weight: 500;
+}
+
+
+@media only screen and (max-width:1024px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width:426px) {
+  .container {
+    width: 85%;
+  }
+
+  form {
+    padding: 1rem 1rem;
+  }
+
+  .btn {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:376px) {
+
+  
+
+  .container {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  form {
+    padding: 1rem 0rem;
+  }
 }

@@ -1,21 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("user", JSON.stringify(input));
+    navigate("/login");
+  }
+
   return (
     <div className="container">
       <div className="form_container">
-        <h2>Login</h2>
+        <h2>Sign Up</h2>
         <hr />
-        <form>
+        <form >
           <div>
             <label htmlFor="inputUsername" className="form-label">
               Username
             </label>
             <input
+              name="name"
+              value={input.name}
+              onChange={(e) => 
+                setInput({
+                  ...input, [e.target.name]: e.target.value,
+                })
+              }
               type="text"
               className="username mb-3"
               placeholder="Enter Username"
-              autoComplete="off"
             />
           </div>
           <div>
@@ -23,9 +43,16 @@ const Register = () => {
               Email
             </label>
             <input
+              name="email"
+              value={input.email}
+              onChange={(e) =>
+                setInput({
+                  ...input, [e.target.name]: e.target.value,
+                })
+              }
               type="email"
               className="email mb-3"
-              placeholder="Enter email"
+              placeholder="Enter Email"
               autoComplete="off"
             />
           </div>
@@ -34,6 +61,13 @@ const Register = () => {
               Password
             </label>
             <input
+              name="password"
+              value={input.password}
+              onChange={(e) =>
+                setInput({
+                  ...input, [e.target.name]: e.target.value,
+                })
+              }
               type="password"
               className="passwrod mb-3"
               placeholder="Password"
@@ -41,18 +75,18 @@ const Register = () => {
             />
           </div>
           <div>
-            <a href="#">Forgot Password?</a>
+            <Link to="/register">Forgot Password?</Link>
           </div>
 
-          <div class="mt-3 mb-2">
-            <button class="btn btn-primary" type="button">
-              Login
+          <div className="mt-3 mb-2">
+            <button className="btn btn-primary" type="button" onClick={handleSubmit}> 
+              Sign Up
             </button>
           </div>
 
           <div className="signIn">
             <p>
-              Already have an account? <a href="#">Sign In</a>
+              Already have an account? <Link to="/login">Sign In</Link>
             </p>
           </div>
         </form>
