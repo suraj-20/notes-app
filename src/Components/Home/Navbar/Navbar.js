@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ handleToggleDarkMode }) => {
   const [showSidebar, setShowSidebar] = useState();
   const navigate = useNavigate();
   const userName = JSON.parse(localStorage.getItem("user"));
@@ -24,14 +24,22 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="logo">
-          <h2 className="heading">Notes App</h2>
+          <h2 className="heading">Notes</h2>
         </div>
+
+        <i
+          class="fa-solid fa-circle-half-stroke toggler-in-small-screen"
+          onClick={() =>
+            handleToggleDarkMode((previousDarkMode) => !previousDarkMode)
+          }
+        ></i>
+
         <button
           className="navbar-toggler"
           type="button"
           onClick={() => setShowSidebar(!showSidebar)}
         >
-          <i class="fa-sharp fa-solid fa-bars"></i>
+          <i className="fa-sharp fa-solid fa-bars"></i>
         </button>
 
         {showSidebar ? (
@@ -103,6 +111,12 @@ const Navbar = () => {
                 Sign Up
               </button>
             )}
+            <i
+              class="fa-solid fa-circle-half-stroke"
+              onClick={() =>
+                handleToggleDarkMode((previousDarkMode) => !previousDarkMode)
+              }
+            ></i>
           </div>
         </div>
       </nav>

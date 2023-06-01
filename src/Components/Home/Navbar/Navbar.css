@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   /* translate: 0 -72px; */
@@ -11,8 +11,9 @@
   width: 100%;
   height: 72px;
   box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
-  background: #6b63ff;
+  background: #dfdfe2;
   transition: 0.3s;
+  margin-bottom: 2.5rem;
 }
 
 .nav-items {
@@ -38,19 +39,27 @@ p {
 }
 
 .navbar-toggler {
-    display: none;
+  display: none;
 }
 
 .nav-item {
-    display: none;
+  display: none;
+}
+
+.fa-circle-half-stroke {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.toggler-in-small-screen {
+  display: none;
 }
 
 @media only screen and (max-width: 376px) {
-
-    .navbar {
-        padding: 20px 10px;
-        gap: 0.5rem ;
-    }
+  .navbar {
+    padding: 20px 10px;
+    gap: 0.5rem;
+  }
 
   .nav-items {
     display: none;
@@ -64,8 +73,8 @@ p {
   }
 
   p {
-    color: white;
-    font-size: 1.3rem;
+    color: rgb(3, 3, 3);
+    /* font-size: 1.3rem; */
   }
 
   .gap-3 {
@@ -74,12 +83,20 @@ p {
 
   .navbar-toggler {
     display: block;
+    color: black;
+    outline: none;
   }
 
   .sidebar {
     width: 100%;
     height: 30vh;
-    background-color: #244891;
-    opacity: 0.8;
+    background-color: #f0f0f1;
+    /* opacity: 0.8; */
+  }
+
+  .toggler-in-small-screen {
+    display: block;
+    position: absolute;
+    right: 5rem;
   }
 }

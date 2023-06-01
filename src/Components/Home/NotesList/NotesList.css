@@ -1,0 +1,33 @@
+.notes {
+  background-color: #cbcb36;
+  /* opacity: 0.5; */
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 1rem;
+  /* width: 400px; */
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+}
+
+.notes span {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.note_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete {
+  background-color: transparent;
+  color: #000000;
+  border: none;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}

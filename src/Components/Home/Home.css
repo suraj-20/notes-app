@@ -1,0 +1,33 @@
+.home_container {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.dark-mode .home_container,
+.dark-mode .navbar {
+  background-color: #000;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+/* .dark-mode {
+  background-color: black;
+} */
+
+.dark-mode h2 {
+  color: rgb(234, 234, 239);
+}
+
+.dark-mode .fa-circle-half-stroke,
+.dark-mode p,
+.dark-mode .navbar-toggler {
+  color: #fff;
+}
+
+@media only screen and (max-width: 376px) {
+  .dark-mode p {
+    color: #000;
+  }
+}

@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&family=Poppins:wght@300;400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&family=Poppins:wght@300;400;600;800&display=swap");
 
 body {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+}
+
+.login-container {
   height: 100vh;
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -33,6 +37,7 @@ h2 {
 
 p {
   margin: 0;
+  /* font-size: 1.5rem; */
 }
 
 hr {
@@ -65,7 +70,7 @@ input {
 }
 
 .buttons {
-  width: 12rem;
+  width: 14rem;
   align-items: center;
   justify-content: end;
 }
@@ -84,14 +89,13 @@ a {
   font-weight: 500;
 }
 
-
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   .container {
     width: 70%;
   }
 }
 
-@media only screen and (max-width:426px) {
+@media only screen and (max-width: 426px) {
   .container {
     width: 85%;
   }
@@ -105,10 +109,7 @@ a {
   }
 }
 
-@media only screen and (max-width:376px) {
-
-  
-
+@media only screen and (max-width: 376px) {
   .container {
     width: 95%;
   }

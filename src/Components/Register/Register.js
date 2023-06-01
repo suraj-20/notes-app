@@ -13,14 +13,15 @@ const Register = () => {
     e.preventDefault();
     localStorage.setItem("user", JSON.stringify(input));
     navigate("/login");
-  }
+  };
 
   return (
+    <div className="login-container">
     <div className="container">
       <div className="form_container">
         <h2>Sign Up</h2>
         <hr />
-        <form >
+        <form>
           <div>
             <label htmlFor="inputUsername" className="form-label">
               Username
@@ -28,9 +29,10 @@ const Register = () => {
             <input
               name="name"
               value={input.name}
-              onChange={(e) => 
+              onChange={(e) =>
                 setInput({
-                  ...input, [e.target.name]: e.target.value,
+                  ...input,
+                  [e.target.name]: e.target.value,
                 })
               }
               type="text"
@@ -47,7 +49,8 @@ const Register = () => {
               value={input.email}
               onChange={(e) =>
                 setInput({
-                  ...input, [e.target.name]: e.target.value,
+                  ...input,
+                  [e.target.name]: e.target.value,
                 })
               }
               type="email"
@@ -65,7 +68,8 @@ const Register = () => {
               value={input.password}
               onChange={(e) =>
                 setInput({
-                  ...input, [e.target.name]: e.target.value,
+                  ...input,
+                  [e.target.name]: e.target.value,
                 })
               }
               type="password"
@@ -79,7 +83,11 @@ const Register = () => {
           </div>
 
           <div className="mt-3 mb-2">
-            <button className="btn btn-primary" type="button" onClick={handleSubmit}> 
+            <button
+              className="btn btn-primary"
+              type="button"
+              onClick={handleSubmit}
+            >
               Sign Up
             </button>
           </div>
@@ -91,6 +99,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 };
